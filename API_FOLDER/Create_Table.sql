@@ -9,3 +9,5 @@ CREATE TABLE Personal_Details(
 Insert into Personal_Details
 (person_id,first_name,last_name)
 values (12345,'Ryan','Hipolito');
+
+Select * from Personal_Details;
