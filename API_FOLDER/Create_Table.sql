@@ -4,3 +4,8 @@ CREATE TABLE Personal_Details(
     last_name VARCHAR2(50) NOT NULL,
     PRIMARY KEY(person_id)
 );
+
+
+Insert into Personal_Details
+(person_id,first_name,last_name)
+values (12345,'Ryan','Hipolito');
