@@ -5,9 +5,11 @@ CREATE TABLE Personal_Details(
     PRIMARY KEY(person_id)
 );
 
+GRANT ALL ON Personal_Details to C##Devops;
 
 Insert into Personal_Details
 (person_id,first_name,last_name)
 values (12345,'Ryan','Hipolito');
+
 
 Select * from Personal_Details;
