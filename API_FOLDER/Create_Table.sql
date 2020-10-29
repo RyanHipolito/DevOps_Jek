@@ -11,5 +11,13 @@ Insert into Personal_Details
 (person_id,first_name,last_name)
 values (12345,'Ryan','Hipolito');
 
+Insert into Personal_Details
+(person_id,first_name,last_name)
+values (12265,'Shiela','Ultra');
+
+Insert into Personal_Details
+(person_id,first_name,last_name)
+values (11789,'Nerison','Manuel');
+
 
 Select * from Personal_Details;
