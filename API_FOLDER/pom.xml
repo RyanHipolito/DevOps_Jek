@@ -10,20 +10,21 @@
 
 <build>
 <plugin>
-  <artifactId>exec-maven-plugin</artifactId>
-  <groupId>API_FOLDER</groupId>
-  <executions>
-    <execution><!-- Run our version calculation script -->
-      <id>Version Calculation</id>
-      <phase>generate-sources</phase>
-      <goals>
-        <goal>exec</goal>
-      </goals>
-      <configuration>
-        <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh Test_cases.sql</executable>
-      </configuration>
-    </execution>
-  </executions>
+ <groupId>API_FOLDER</groupId>
+ <artifactId>exec-maven-plugin</artifactId>
+ <version>3.2.2</version>
+ <executions>
+  <execution>
+   <id>my-exec</id>
+   <phase>pre-integration-test</phase>
+  <goals>
+   <goal>exec</goal>
+  </goals>
+  </execution>
+ </executions>
+ <configuration>
+  <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh</executable>
+ </configuration>
 </plugin>
 </build>
 </project>
