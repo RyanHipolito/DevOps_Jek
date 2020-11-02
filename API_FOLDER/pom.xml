@@ -10,21 +10,23 @@
 
 <build>
 <plugin>
- <groupId>API_FOLDER</groupId>
- <artifactId>exec-maven-plugin</artifactId>
- <version>3.2.2</version>
- <executions>
-  <execution>
-   <id>my-exec</id>
-   <phase>pre-integration-test</phase>
-  <goals>
-   <goal>exec</goal>
-  </goals>
-  </execution>
- </executions>
- <configuration>
-  <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh</executable>
- </configuration>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <executions>
+        <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+                <tasks>
+                    <exec executable="${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh">
+                        <arg value="Test_cases.sql"/>
+                    </exec>
+                </tasks>
+            </configuration>
+            <goals>
+                <goal>run</goal>
+            </goals>
+        </execution>
+    </executions>
 </plugin>
 </build>
 </project>
