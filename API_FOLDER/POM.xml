@@ -9,7 +9,7 @@
         <goal>exec</goal>
       </goals>
       <configuration>
-        <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh</executable>
+        <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh Test_cases.sql</executable>
       </configuration>
     </execution>
   </executions>
