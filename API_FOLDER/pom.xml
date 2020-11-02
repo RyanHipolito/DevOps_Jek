@@ -10,25 +10,28 @@
 
 <build>
   <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-    <plugins>
-    <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-    <plugin>
-      <artifactId>exec-maven-plugin</artifactId>
-      <groupId>API_FOLDER</groupId>
-      <executions>
-        <execution><!-- Run our version calculation script -->
-          <id>Version Calculation</id>
-          <phase>generate-sources</phase>
-          <goals>
-            <goal>exec</goal>
-          </goals>
-          <configuration>
-            <executable>${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh</executable>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-    </plugins>
+  <plugins>
+  <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <executions>
+      <execution>
+        <phase>generate-sources</phase>
+        <configuration>
+          <tasks>
+            <exec executable="${WORKSPACE}/API_FOLDER/Execute_Test_cases.sh">
+              <arg value="Test_cases.sql"/>
+            </exec>
+          </tasks>
+        </configuration>
+        <goals>
+          <goal>run</goal>
+        </goals>
+      </execution>
+    </executions>
+  </plugin>
+  </plugins>
   </pluginManagement>
   </build>
 </project>
