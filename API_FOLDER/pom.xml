@@ -36,4 +36,16 @@
     </plugins>
   </pluginManagement>
   </build>
+  
+  <properties>
+    <example.one>Variable replacement is available from Maven.</example.one>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.atlassian.maven.plugins</groupId>
+      <artifactId>bash-maven-plugin</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>
