@@ -14,8 +14,8 @@
   </properties>
 
   <build>
-    <plugins>
-      <plugin>
+        <plugins>
+        <plugin>
         <groupId>co.escapeideas.maven</groupId>
         <artifactId>ansible-maven-plugin</artifactId>
         <version>1.3.0</version>
@@ -28,6 +28,6 @@
           </execution>
         </executions>
       </plugin>
-    </plugins>
-  </build>
+        </plugins>
+</build>
 </project>
