@@ -31,7 +31,7 @@ Insert into Personal_Details
 values (11789,'Nerison','Manuel');
 
 Insert into Information_Details
-(person_id,Status,Address1.Address2,Telephone,Mobile_Number)
+(person_id,Status,Address1,Address2,Telephone,Mobile_Number)
 values (11789,'Single','I-514 One Sorrento','Pasig City','078-243-4456','09277378873');
 
 Insert into Information_Details
@@ -39,5 +39,5 @@ Insert into Information_Details
 values (12345,'Married','#206 publacion','Pasig City','02-632-8762','09263138033');
 
 Insert into Information_Details
-(person_id,Status,Address1.Address2,Telephone,Mobile_Number)
+(person_id,Status,Address1,Address2,Telephone,Mobile_Number)
 values (12265,'Married','#206 publacion','Pasig City','02-632-8762','09238877902');
