@@ -7,6 +7,13 @@
   <artifactId>bash-maven-plugin</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <sonar.sources>src/test/java,src/main/java/utilities</sonar.sources>
+  </properties>
 
 <build>
   <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -36,16 +43,4 @@
     </plugins>
   </pluginManagement>
   </build>
-  
-  <properties>
-    <example.one>Variable replacement is available from Maven.</example.one>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>com.atlassian.maven.plugins</groupId>
-      <artifactId>bash-maven-plugin</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>
