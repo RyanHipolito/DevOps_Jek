@@ -2,7 +2,7 @@
 . /home/ec2-user/.bash_profile
 SQL_statment=`cat $1`
 
-SPOOL_FILE=${WORKSPACE}/API_FOLDER/execute.log
+SPOOL_FILE=/var/lib/jenkins/workspace/Oracle_Pipeline/API_FOLDER/execute.log
 
 SQLPLUS_OUTPUT=`sqlplus "C##Devops/devops12@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.31.4.53)(PORT=1521))(CONNECT_DATA=(SID=cdb1)))" << EOF
 		SET HEAD OFF
@@ -16,7 +16,7 @@ ${SQL_statment}
 
 EOF`
 
-cat $SQLPLUS_OUTPUT > ${WORKSPACE}/API_FOLDER/execute.log
+cat $SQLPLUS_OUTPUT > /var/lib/jenkins/workspace/Oracle_Pipeline/API_FOLDER/execute_test.log
 
 RC=$?
 
